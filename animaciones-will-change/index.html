@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Transformacion Origen</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cuadrado" id="cuadrado">
+            Hola mundo!
+        </div>
+    </div>
+    <script>
+        const $cuadrado = document.getElementById('cuadrado');
+        //$cuadrado.addEventListener('nombre del evento', 'que hago cuando el evento ocurra')
+        $cuadrado.addEventListener('animationend', (event) => {
+            //console.log(event.animationName);
+            if (event.animationName === 'rebote') {
+                $cuadrado.style.animationName = 'cuadrado, escalera';
+                $cuadrado.style.animationDuration = '3s';
+            }
+        })
+    </script>
+</body>
+
+</html>
